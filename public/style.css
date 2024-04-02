@@ -1,0 +1,90 @@
+/* General styling for the page */
+body, html {
+    font-family: 'Arial', sans-serif; /* Plain looking font */
+    color: #333; /* Dark grey text for good contrast */
+    background-color: #fff; /* White background */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Centering the new task form */
+#new-task-form {
+    background-color: #fff; /* White background for a clean appearance */
+    padding: 20px;
+    border-radius: 5px; /* Softly rounded corners */
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Styling the input fields and submit button */
+#new-task-form input[type="text"] {
+    border: 1px solid #eee; /* Light, almost invisible border */
+    padding: 10px;
+    width: calc(100% - 22px); /* Adjust width to accommodate padding */
+    margin-bottom: 10px;
+}
+
+#new-task-form button[type="submit"] {
+    background-color: #ced4da; /* Vibrant blue background */
+    color: black; /* White text for contrast */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+#new-task-form button[type="submit"]:hover {
+    background-color: #e9ecef; /* Darker blue on hover */
+}
+
+/* Task list styling */
+#task-list {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#task-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center; /* Aligns text with checkbox */
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+    width: 24px; /* Increased size for visibility */
+    height: 24px; /* Increased size for visibility */
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Space between checkbox and text */
+    display: inline-block;
+    position: relative;
+}
+
+input[type="checkbox"]:before {
+    content: '*'; /* Star symbol */
+    position:absolute;
+    top:15%;
+    left:30%;
+    color: #ccc; /* Light grey star */
+    font-size: 24px; /* Adjust to fit the checkbox size */
+    line-height: 1;
+}
+
+input[type="checkbox"]:checked:before {
+    content: '*'; /* Filled star symbol */
+    color: #333; /* Dark grey for visibility */
+}
